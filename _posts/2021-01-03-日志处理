@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Shell"
+date: 2022-06-01
+excerpt: "shell处理日志,只保留七天日志"
+tags: [mongodb]
+comments: false
+project: true
+---
+
+## Shell
