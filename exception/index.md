@@ -1,7 +1,7 @@
 ---
-layout: project
+layout: exception
 title: '异常处理'
-excerpt: "A List of Projects"
+excerpt: "A List of exception"
 comments: false
 ---
 
