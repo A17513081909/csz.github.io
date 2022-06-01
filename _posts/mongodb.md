@@ -8,5 +8,4 @@ comments: false
 project: true
 ---
 
-![Mongodb集群配置、优化]
 ## mongodb部署、优化
