@@ -1,8 +1,6 @@
 # Site navigation links
 
-- title: Exception handling
+- title: Scripts
   url: /projects/
-- title: Shell
-  url: /shel/
-- title: Python
-  url: /python/
+- title: Exception handling
+  url: /Error/
