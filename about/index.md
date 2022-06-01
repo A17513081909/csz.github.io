@@ -3,7 +3,7 @@ layout: page
 title: Me
 tags: [me]
 date: 2022-06-21
-comments: true
+comments: false
 ---
     
 <center>这是</center>
@@ -20,4 +20,4 @@ comments: true
 * Simple navigation menu
 * MathJax support
       
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+<!-- [Install Moon](https://github.com/TaylanTatli/Moon){: .btn} -->
