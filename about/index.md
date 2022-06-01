@@ -1,23 +1,31 @@
 ---
 layout: page
-title: Me
+title: Myself
 tags: [me]
 date: 2022-06-21
 comments: false
 ---
     
-<center>这是</center>
+<center>'我，绝不睡觉----书读百遍，其义自现'</center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+## 职业技能+架构原理
+* Linux ubuntu/centos/kali
+* Docker
+* Kubernetes
+* Prometheus
+* Python
+* Shell
+* Nginx
+* Tomcat
+* ELK
+* Zabbix
+* Gitlab-runner
+* Jenkins-CI/CD
+* Kafka
+* Zookeeper
+* Keepalived
+* RHCSA、RHCE，Dest:RHCA
+* ·······
+
       
 <!-- [Install Moon](https://github.com/TaylanTatli/Moon){: .btn} -->
