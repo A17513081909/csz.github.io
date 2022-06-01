@@ -1,6 +1,4 @@
-<center>'异常处理'</center>
-
-## 职业技能+架构原理
+## 异常处理
 * Linux ubuntu/centos/kali
 * Docker
 * Kubernetes
