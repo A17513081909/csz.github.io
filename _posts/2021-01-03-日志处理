@@ -9,3 +9,7 @@ project: true
 ---
 
 ## Shell
+{% highlight html %}
+find /opt/soft/log/ -mtime +7 -name "*.log" -exec rm -rf {} \
+###/opt/soft/log/为保存日志的目录
+{% endhighlight %}
