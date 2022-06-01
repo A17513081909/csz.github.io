@@ -48,7 +48,8 @@ h3.title a {
 		padding: 10px 18px;
 		margin: 0 10px;
 		text-decoration: none;
-		background: $white;
+// 		background: $white;
+        background: rgba(255,255,255,0.5)
 		color: $color_shark;
 		a {
 			@include font-rem(20);
