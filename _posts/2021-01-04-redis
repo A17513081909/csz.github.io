@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redis集群
+title: Redis
 date: 2022-06-01
 excerpt: "redis集群的搭建、配置、优化"
 tags: [redis]
