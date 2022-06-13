@@ -1,6 +1,6 @@
 ---
 layout: project
-title: '运维开发'
+title: '自动化'
 excerpt: "A List of Projects"
 comments: false
 ---
