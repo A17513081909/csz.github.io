@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Myself
+title: 长术
 tags: [me]
 date: 2022-06-21
 comments: false
 ---
     
-<center>'我，绝不睡觉----书读百遍，其义自现'</center>
+<center>'知识匮乏，我穷的的睡不着'</center>
 
-## 职业技能+架构原理
+## 职业技能
 * Linux ubuntu/centos/kali
 * Docker
 * Kubernetes
@@ -19,80 +19,12 @@ comments: false
 * Tomcat
 * ELK
 * Zabbix
-* Gitlab-runner
+* Gitlab-runner-devops
 * Jenkins-CI/CD
 * Kafka
 * Zookeeper
 * Keepalived
+* Haproxy
 * RHCSA、RHCE，Dest:RHCA
 * ·······
 
-a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
- a   
-a    
- a     
- a      
- aaa    
- a  
- a  
-## <span name="prometheus" id="prometheus">Prometheus</span>  
-sadasfsafsafsa
-
-
-      
-<!-- [Install Moon](https://github.com/TaylanTatli/Moon){: .btn} -->
