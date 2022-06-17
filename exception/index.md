@@ -15,4 +15,6 @@ sudo apt install python-dev python3-dev python3.7-dev
 sudo apt install python-setuptools    
 * pip换源，清华大学源    
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple    
+* Error saving credentials: error storing credentials - err: no credentials server URL, out: `no credentials server URL` while login into docker    
+sudo apt install -y gnupg2 pass  
 
