@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 长术
-tags: [me]
+title: 长术爱运维
+tags: [devops]
 date: 2022-06-21
 comments: false
 ---
     
-<center>'知识匮乏，我穷的的睡不着'</center>
+<center>'长术绝不睡觉！'</center>
 
 ## 职业技能
 * Linux ubuntu/centos/kali
