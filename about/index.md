@@ -6,7 +6,7 @@ date: 2022-06-21
 comments: false
 ---
     
-<center>'长术绝不睡觉！'</center>
+<center>长术绝不睡觉！</center>
 
 ## 职业技能
 * Linux ubuntu/centos/kali
