@@ -694,9 +694,11 @@ kubectl -n kubernetes-dashboard create token admin-user
 ![Uploading image.png…]()
   
 * 命令自动补全  
+```
 yum -y install bash-completion  
 echo "source <(kubectl completion bash)" >> ~/.bashrc  
 cat ~/.bashrc  
+```
 
 
 
