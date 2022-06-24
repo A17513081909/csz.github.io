@@ -1,5 +1,26 @@
+---
+layout: post
+title: K8s高可用架构
+date: 2022-06-01
+excerpt: "使用haproxy+keepalived实现k8s高可用架构集群，包括kubedam与二进制安装"
+tags: ['haproxy+keepalived','kubeadm'，'二进制']
+comments: false
+<!-- project: true -->
+---
+
 阿里云国内仓库：registry.aliyuncs.com/google_containers/
-1Kubeadm高可用安装k8s+keepalived+haproxy，containerd做为容器引擎
+
+Kubeadm安装与二进制安装：
+kubeadm安装的集群，证书有效期默认是一年。master节点的kube-apiserver、kube-scheduler、kube-controller-manager、etcd都是以容器运行的。可以通过kubectl get po -n kube-system查看
+启动和二进制不同的是：
+kubelet的配置文件在/etc/sysconfig/kubelet和/var/lib/kubelet/config.yaml，修改后需要重启kubelet进程；其他组件的配置文件在/etc/kubernetes/manifests目录下，比如kube-apiserver.yaml，该yaml文件更改后，kubelet会自动刷新配置，也就是会重启pod，不能再次创建该文件
+kube-proxy的配置在kube-system命名空间下的configmap中，可以通过
+kubectl edit cm kube-proxy -n kube-system
+进行更改，更改完成后，可以通过patch重启kube-proxy
+kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}" -n kube-system
+生产环境要用二进制安装
+
+Kubeadm使用keepalived+haproxy安装高可用集群，containerd做为容器引擎
 环境：
 192.168.1.10----k8s-master01
 192.168.1.15----k8s-master02
@@ -9,17 +30,6 @@ Docker 20.10.x
 K8s 1.24.x
 Pod网段 172.16.0.0/12
 Service网段 192.168.0.0/16
-
-Kubeadm安装与二进制安装：
-kubeadm安装的集群，证书有效期默认是一年。master节点的kube-apiserver、kube-scheduler、kube-controller-manager、etcd都是以容器运行的。可以通过kubectl get po -n kube-system查看
-启动和二进制不同的是，
-kubelet的配置文件在/etc/sysconfig/kubelet和/var/lib/kubelet/config.yaml，修改后需要重启kubelet进程；其他组件的配置文件在/etc/kubernetes/manifests目录下，比如kube-apiserver.yaml，该yaml文件更改后，kubelet会自动刷新配置，也就是会重启pod，不能再次创建该文件
-kube-proxy的配置在kube-system命名空间下的configmap中，可以通过
-kubectl edit cm kube-proxy -n kube-system
-进行更改，更改完成后，可以通过patch重启kube-proxy
-kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}" -n kube-system
-生产环境要用二进制安装
-
 
 
 以下所有操作未注明单台节点的即为三台节点统一命令操作	
