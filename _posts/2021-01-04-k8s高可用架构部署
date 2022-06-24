@@ -1,24 +1,30 @@
 ---
 layout: post
 title: K8s高可用架构
-date: 2022-06-01
+date: 2022-06-03
 excerpt: "使用haproxy+keepalived实现k8s高可用架构集群，包括kubedam与二进制安装"
 tags: ['haproxy+keepalived','kubeadm'，'二进制']
 comments: false
 <!-- project: true -->
 ---
-
-阿里云国内仓库：registry.aliyuncs.com/google_containers/
-
-Kubeadm安装与二进制安装：
-kubeadm安装的集群，证书有效期默认是一年。master节点的kube-apiserver、kube-scheduler、kube-controller-manager、etcd都是以容器运行的。可以通过kubectl get po -n kube-system查看
-启动和二进制不同的是：
+{% highlight html %}
+阿里云国内仓库：registry.aliyuncs.com/google_containers/  
+Kubeadm安装与二进制安装：  
+kubeadm安装的集群，证书有效期默认是一年。master节点的kube-apiserver、kube-scheduler、kube-controller-manager、etcd都是以容器运行的。可以通过kubectl get po -n kube-system查看  
+启动和二进制不同的是：  
 kubelet的配置文件在/etc/sysconfig/kubelet和/var/lib/kubelet/config.yaml，修改后需要重启kubelet进程；其他组件的配置文件在/etc/kubernetes/manifests目录下，比如kube-apiserver.yaml，该yaml文件更改后，kubelet会自动刷新配置，也就是会重启pod，不能再次创建该文件
-kube-proxy的配置在kube-system命名空间下的configmap中，可以通过
-kubectl edit cm kube-proxy -n kube-system
-进行更改，更改完成后，可以通过patch重启kube-proxy
-kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}" -n kube-system
-生产环境要用二进制安装
+kube-proxy的配置在kube-system命名空间下的configmap中，可以通过  
+kubectl edit cm kube-proxy -n kube-system  
+进行更改，更改完成后，可以通过patch重启kube-proxy  
+kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}" -n kube-system  
+生产环境要用二进制安装  
+{% endhighlight %}
+* 环境配置
+
+
+
+
+
 
 Kubeadm使用keepalived+haproxy安装高可用集群，containerd做为容器引擎
 环境：
