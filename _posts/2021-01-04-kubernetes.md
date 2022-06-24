@@ -21,6 +21,7 @@ kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"
 生产环境要用二进制安装  
   
 * 基本环境配置  
+```
 Kubeadm使用keepalived+haproxy安装高可用集群，containerd做为容器引擎  
 环境：  
 192.168.1.10----k8s-master01  
@@ -32,11 +33,11 @@ K8s 1.24.x
 Pod网段 172.16.0.0/12  
 Service网段 192.168.0.0/16  
 以下所有操作未注明单台节点的即为三台节点统一命令操作	  
-{% highlight html %}vim /etc/hosts  {% endhighlight %}
+vim /etc/hosts  
 ![image](https://user-images.githubusercontent.com/80735002/175618513-94414bfe-d989-4725-acc9-c4decb87421f.png)
 单台修改主机名称  
-{% highlight html %}vim /etc/hostname  {% endhighlight %}
-{% highlight html %}hostname k8s-master{01,02,03}  {% endhighlight %}
+vim /etc/hostname  
+hostname k8s-master{01,02,03}  
 ![image](https://user-images.githubusercontent.com/80735002/175618772-26975425-8816-4704-8721-1e64381af6c6.png)
 ![image](https://user-images.githubusercontent.com/80735002/175618783-f187cd4e-1077-43ff-b363-8e715e6087bd.png)
 ![image](https://user-images.githubusercontent.com/80735002/175618797-f5c48530-c473-40b3-9e00-3a0e6830f5a7.png)
@@ -57,6 +58,7 @@ repo_gpgcheck=0
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg  
 EOF  
 关闭防火墙、seliuux、NetworkManager  
+```
 systemctl stop firewalld && systemctl disable firewalld  
 systemctl stop NetworkManager && systemctl disable NetworkManager  
 sed -i 's#SELINUX=enforcing#SELINUX=disable#g' /etc/sysconfig/selinux  
