@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'K8s高可用架构部署'
+title: 'Kubernetes'
 date: 2022-06-25
 excerpt: "使用haproxy+keepalived实现k8s高可用架构集群，包括kubedam与二进制安装"
 tags: ['haproxy+keepalived','kubeadm','二进制']
