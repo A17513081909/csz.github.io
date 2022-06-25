@@ -23,4 +23,20 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```  
 sudo apt install -y gnupg2 pass
 ```
+* Fatal error When use the Netplan Apply Command on Ubuntu  
+```
+apt remove netplan  
+apt install netplan.io  
+```
+* ubuntu18.04，dpkg-warning：dpkg: warning: files list file for package 'fonts-sil-abyssinica' missing; assuming package has no files currently installed  
+```
+将所有warning包拷贝到dpkg-warning.txt文件里  
+新建脚本dpkg-pkgreinstall：  
+#!/bin/bash  
+for package in $(cat dpkg-warning.txt | grep "dpkg: warning: files list file for package " | grep -Po "'[^']*'" | sed "s/'//g")；  
+do  
+  sudo apt-get install --reinstall "$package" -y;  
+done  
+给权限，执行即可  
+```
 
