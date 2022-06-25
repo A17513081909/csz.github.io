@@ -137,7 +137,7 @@ reboot
 ![image](https://user-images.githubusercontent.com/80735002/175627383-0314f00b-a70d-49cd-b4c2-6d4ccb0ddacb.png)
 ```
 
-## 使用ipvs模块  
+## <span id='b'>使用ipvs模块  </span>
 ```
 安装ipvsadm，生产环境推荐使用ipvs而不是iptables  
 yum -y install ipvsadm ipset sysstat conntrack libseccomp  
@@ -183,7 +183,7 @@ kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"
 ![image](https://user-images.githubusercontent.com/80735002/175647717-e7c5c402-d0da-4af6-9123-03240f938335.png) 
 ```
 
-## 配置k8s集群内核参数    
+## <span id='c'>配置k8s集群内核参数    </span>
 ```
 cat <<EOF > /etc/sysctl.d/k8s.conf  
 net.ipv4.ip_forward = 1  
@@ -220,7 +220,7 @@ lsmod |grep --color=auto -e ip_vs -e nf_conntrack
 ![image](https://user-images.githubusercontent.com/80735002/175630867-d05db368-9a26-4851-88fb-61af676e935f.png)
 ```
 
-## 安装containerd    
+## <span id='d'>安装containerd    </span>
 ```
 yum -y install docker-ce-20.10.* docker-ce-cli-20.10.*  
 不使用dockerfile则无需启动docker，配置并启动containerd即可  
@@ -262,7 +262,7 @@ debug: false
 EOF  
 ```
 
-## 安装k8s组件  
+## <span id='e'>安装k8s组件  </span>
 ```
 查看最新版本  
 yum list kubeadm.x86_64 --showduplicates | sort -r  
@@ -277,7 +277,7 @@ EOF
 systemctl daemon-reload && systemctl enable --now kubelet  
 ```
   
-## 高可用组件安装与配置  
+## <span id='f'>高可用组件安装与配置  </span>
 ```
 yum install keepalived haproxy -y  
 
@@ -390,7 +390,7 @@ systemctl enable --now keepalived
 ![image](https://user-images.githubusercontent.com/80735002/175644068-f9665efa-9557-4b42-9c61-37f8d92a1ffd.png) 
 ```
 
-## 集群初始化  
+## <span id='g'>集群初始化  </span>
 ```
 以下操作只在master01上执行  
 vim kubeadm-config.yml  
@@ -479,7 +479,7 @@ master01查看nodes
 ![image](https://user-images.githubusercontent.com/80735002/175644947-e4ab73ab-64d4-4f93-863b-6961ecd83b7a.png)
 ```
 
-## 污点  
+## <span id='h'>污点  </span>
 ```
 生产中master节点一般部署系统服务，node节点部署业务、应用，但是我没用node，所以将三台master的污点给去掉  
 查看污点
@@ -492,7 +492,7 @@ kubectl taint node k8s-master node-role.kubernetes.io/master:NoSchedule-
 ![image](https://user-images.githubusercontent.com/80735002/175644998-f4eb3a93-6362-409d-944c-9e97cde06073.png)
 ```
 
-## 配置calico网络  
+## <span id='i'>配置calico网络  </span>
 ```
 仅在master01上执行  
 修改pod网段  
@@ -514,7 +514,7 @@ kubectl get pods -n kube-system
 ![image](https://user-images.githubusercontent.com/80735002/175645212-3862652a-b951-42aa-bbfc-f69d9f643501.png)
 ```
 
-## Metrics部署  
+## <span id='j'>Metrics部署  
 ```
 在新版的k8s中，系统资源的采集均使用metrics-server，可以通过metrics采集节点和podde 内存、磁盘、cpu和网络的使用率  
 
@@ -740,7 +740,7 @@ kubectl get pods -n kube-system -l k8s-app=metrics-server
 ![image](https://user-images.githubusercontent.com/80735002/175645249-8ed2d326-019e-4bcd-92a5-c94efe7493da.png)
 ```
 
-## Dashboard部署  
+## <span id='k'>Dashboard部署  </span>
 ```
 官方地址：https://github.com/kubernetes/dashboard  
 
