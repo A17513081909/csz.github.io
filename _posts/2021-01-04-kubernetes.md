@@ -8,7 +8,7 @@ comments: false
 <!-- project: true -->
 ---
 
-## <a href='#a'>* 基本环境配置</a> 
+## * <a href='#a'>基本环境配置</a> 
 ## * <a href='#b'>使用ipvs模块</a>  
 ## * <a href='#c'>配置k8s集群内核参数</a>   
 ## * <a href='#d'>安装containerd</a>    
