@@ -8,18 +8,18 @@ comments: false
 <!-- project: true -->
 ---
 
-## 基本环境配置 
-## 使用ipvs模块  
-## 配置k8s集群内核参数  
-## 安装containerd   
-## 安装k8s组件    
-## 高可用组件安装与配置    
-## 集群初始化   
-## 污点   
-## 配置calico网络  
-## Metrics部署    
-## Dashboard部署    
-## 命令自动补全   
+## <a href='#a'>基本环境配置</a> 
+## <a href='#b'>使用ipvs模块</a>  
+## <a href='#c'>配置k8s集群内核参数</a>   
+## <a href='#d'>安装containerd</a>    
+## <a href='#e'>安装k8s组件</a>     
+## <a href='#f'>高可用组件安装与配置</a>     
+## <a href='#g'>集群初始化</a>    
+## <a href='#h'>污点</a>    
+## <a href='#i'>配置calico网络</a>   
+## <a href='#j'>Metrics部署</a>     
+## <a href='#k'>Dashboard部署</a>     
+## <a href='#l'>命令自动补全</a>    
 
 
 ```
@@ -40,7 +40,7 @@ kubectl patch daemonset kube-proxy -p "{\"spec\":{\"template\":{\"metadata\":{\"
 生产环境要用二进制安装  
 ```
 
-## 基本环境配置  
+## <span id='a'>基本环境配置  </span>
 ```
 Kubeadm使用keepalived+haproxy安装高可用集群，containerd做为容器引擎  
 环境：  
@@ -782,7 +782,7 @@ kubectl -n kubernetes-dashboard create token admin-user
 ![Uploading image.png…]()
 ```
 
-## 命令自动补全  
+## <span id='l'>命令自动补全</span>  
 ```
 yum -y install bash-completion  
 echo "source <(kubectl completion bash)" >> ~/.bashrc  
