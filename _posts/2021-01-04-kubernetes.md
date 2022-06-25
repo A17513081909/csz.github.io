@@ -9,17 +9,17 @@ comments: false
 ---
 
 ## * <a href='#a'>基本环境配置</a> 
-## <a href='#b'>使用ipvs模块</a>  
-## <a href='#c'>配置k8s集群内核参数</a>   
-## <a href='#d'>安装containerd</a>    
-## <a href='#e'>安装k8s组件</a>     
-## <a href='#f'>高可用组件安装与配置</a>     
-## <a href='#g'>集群初始化</a>    
-## <a href='#h'>污点</a>    
-## <a href='#i'>配置calico网络</a>   
-## <a href='#j'>Metrics部署</a>     
-## <a href='#k'>Dashboard部署</a>     
-## <a href='#l'>命令自动补全</a>    
+## * <a href='#b'>使用ipvs模块</a>  
+## * <a href='#c'>配置k8s集群内核参数</a>   
+## * <a href='#d'>安装containerd</a>    
+## * <a href='#e'>安装k8s组件</a>     
+## * <a href='#f'>高可用组件安装与配置</a>     
+## * <a href='#g'>集群初始化</a>    
+## * <a href='#h'>污点</a>    
+## * <a href='#i'>配置calico网络</a>   
+## * <a href='#j'>Metrics部署</a>     
+## * <a href='#k'>Dashboard部署</a>     
+## * <a href='#l'>命令自动补全</a>    
 
 
 ```
