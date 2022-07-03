@@ -772,14 +772,16 @@ subjects:
 kubectl apply -f admin-user.yaml  
 查看dashboard端口号  
 kubectl get svc kubernetes-dashboard -n kubernetes-dashboard  
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/80735002/177035347-46a812d2-c2a5-4d1c-aaaf-0c47b23fa344.png)
+
 
 获取token  
 kubectl -n kubernetes-dashboard create token admin-user  
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/80735002/177035360-8e0ded0a-2b95-47f4-9eba-efe091d1446b.png)
+
 
 登录  
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/80735002/177035367-5e6eec9a-75e3-4645-9203-57f0c63bff4d.png)
 ```
 
 ### <span id='l'>命令自动补全</span>  
