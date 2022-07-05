@@ -6,9 +6,9 @@ date: 2022-06-21
 comments: false
 ---
     
-<center>长术,绝不睡觉！</center>
 <center>源于生产，致力生产</center>
-<center>电话微信同号:17513081909</center>
+<center>所有的伟大，都源于一个勇敢的开始</center>
+<center>iphone/wechat:17513081909</center>
 
 ## 职业技能
 * Linux ubuntu/centos/kali
