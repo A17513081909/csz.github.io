@@ -39,4 +39,14 @@ do
 done  
 给权限，执行即可  
 ```
+* npm ERR! Cannot read properties of null (reading 'pickAlgorithm')
+```
+npm cache clear --force
+npm install
+```
+* npm ERR! Maximum call stack size exceeded
+```
+npm -v
+npm install -g npm
+```
 
